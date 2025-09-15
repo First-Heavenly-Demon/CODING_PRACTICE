@@ -1,3 +1,5 @@
 import pandas as pd
-practice = pd.read_csv("C:/Users/borob/Downloads/data.csv")
-print(practice)
+
+df = pd.read_csv("C:/Users/borob/Downloads/archive/2020-2025.csv")
+
+print(df)
