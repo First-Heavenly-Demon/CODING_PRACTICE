@@ -1,13 +1,6 @@
 import requests
-import pandas as pd
-
-url = "https://api.coindesk.com/v1/bpi/currentprice.json"
-
+url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
 response = requests.get(url)
 data = response.json()
-
-# Extract the Bitcoin price in USD
-usd_price = data["bpi"]["USD"]["rate"]
-time_updated = data["time"]["updated"]
-
-print("As of", time_updated, "Bitcoin price is USD", usd_price)
+btc_price = data["bitcoin"]["usd"]
+print("Bitcoin price in USD:", btc_price)
