@@ -3,4 +3,4 @@ url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=u
 response = requests.get(url)
 data = response.json()
 btc_price = data["bitcoin"]["usd"]
-print("Bitcoin price in USD:", btc_price)
+print("Bitcoin price in INR:", btc_price)
